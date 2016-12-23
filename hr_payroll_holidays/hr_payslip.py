@@ -33,7 +33,8 @@ class HrPayslip(models.Model):
     def action_payslip_done(self):
         for slip in self:
             leaves = slip._fetch_valid_leaves(slip.employee_id.id, slip.date_from, slip.date_to)
-            leaves.payslip_status = True
+            for leave in leaves:
+                leave.payslip_status = True
         return super(HrPayslip, self).action_payslip_done()
 
     def _fetch_valid_leaves(self, employee_id, date_from, date_to):
