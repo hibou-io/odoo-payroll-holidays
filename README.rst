@@ -1,3 +1,10 @@
+==========
+Deprecated
+==========
+
+Now part of `Hibou's HR & Paroll <https://github.com/hibou-io/odoo-hr-payroll>`_
+
+
 *************************
 Payroll Holidays for Odoo
 *************************
